@@ -4,27 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TapType – Revolutionize Your Typing Workflow</title>
-  
-  <!-- Favicon -->
+
   <link rel="icon" href="images/logo.png">
 
-  <!-- SEO Meta Tags -->
   <meta name="description" content="Experience a smarter way to type with TapType. Tap for lowercase, hold for UPPERCASE. A lightweight, powerful Windows utility that streamlines your workflow without ever needing the Shift key again.">
-  
-  <!-- Tailwind CSS -->
+
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts (Optional, but recommended for a polished look) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Use the modern 'Inter' font family */
     body {
       font-family: 'Inter', sans-serif;
     }
-    /* Style for the scrolled navbar */
     #navbar.scrolled {
       background-color: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(12px);
@@ -35,35 +29,29 @@
 
 <body class="bg-slate-50 text-slate-800 antialiased">
 
-  <!-- ===============================
-  HEADER & NAVIGATION
-  ================================ -->
+  <!-- Header -->
   <header>
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
-          <!-- Logo -->
           <div class="flex-shrink-0">
             <a href="#home" class="text-2xl font-bold text-slate-900">
-              TapType<span class="text-teal-500">.</span>
+              TapType<span class="text-sky-500">.</span>
             </a>
           </div>
-          <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-8">
-            <a href="#features" class="text-slate-600 hover:text-teal-500 transition-colors duration-200 font-medium">Features</a>
-            <a href="#how-it-works" class="text-slate-600 hover:text-teal-500 transition-colors duration-200 font-medium">How It Works</a>
-            <a href="about.html" class="text-slate-600 hover:text-teal-500 transition-colors duration-200 font-medium">About</a>
+            <a href="#features" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">Features</a>
+            <a href="#how-it-works" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">How It Works</a>
+            <a href="about.html" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">About</a>
           </div>
-          <!-- CTA Button -->
           <div>
-            <a href="./TapTypeInstaller.exe" download class="hidden md:inline-block bg-teal-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-teal-600 transition-all duration-300 hover:shadow-lg">
+            <a href="./TapTypeInstaller.exe" download class="hidden md:inline-block bg-sky-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-sky-600 transition-all duration-300 hover:shadow-lg">
               Download for Windows
             </a>
-             <!-- Mobile Menu Button (optional) -->
             <button class="md:hidden text-slate-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
             </button>
           </div>
         </div>
@@ -72,143 +60,135 @@
   </header>
 
   <main>
-    <!-- ===============================
-    HERO SECTION
-    ================================ -->
+    <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <!-- Left Column: Content -->
         <div class="text-center md:text-left">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900">
             The Last Time You'll
-            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-600">Ever Need the Shift Key.</span>
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">Ever Need the Shift Key.</span>
           </h1>
           <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-xl mx-auto md:mx-0">
             Welcome to a fluid, faster way of typing. TapType is a smart Windows utility that distinguishes between a quick tap (lowercase) and a brief hold (UPPERCASE). Boost your productivity and type more intuitively.
           </p>
           <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="./TapTypeInstaller.exe" download class="inline-block bg-teal-500 text-white px-8 py-4 text-lg rounded-lg font-bold shadow-lg hover:bg-teal-600 hover:scale-105 transform transition-all duration-300">
+            <a href="./TapTypeInstaller.exe" download class="inline-block bg-sky-500 text-white px-8 py-4 text-lg rounded-lg font-bold shadow-lg hover:bg-sky-600 hover:scale-105 transform transition-all duration-300">
               ⬇️ Download TapType Now
             </a>
-            <a href="#features" class="inline-block bg-slate-200 text-slate-800 px-8 py-4 text-lg rounded-lg font-bold shadow-md hover:bg-slate-300 transform transition-all duration-300">
+            <a href="#features" class="inline-block bg-sky-100 text-slate-800 px-8 py-4 text-lg rounded-lg font-bold shadow-md hover:bg-sky-200 transform transition-all duration-300">
               Learn More
             </a>
           </div>
         </div>
-
-        <!-- Right Column: Video -->
         <div class="flex justify-center items-center">
-          <div class="w-full max-w-sm h-auto rounded-2xl shadow-2xl overflow-hidden border-4 border-slate-200">
-            <!-- IMPORTANT: Replace this video source with your own! -->
-            <video class="w-full h-full object-cover" src="https://videos.pexels.com/video-files/8449405/8449405-hd_720_1366_25fps.mp4" autoplay loop muted playsinline></video>
+          <!-- Right Column: Smart Typing Animation -->
+<div class="flex justify-center items-center">
+  <div class="w-full max-w-sm h-96 rounded-2xl shadow-2xl overflow-hidden border-4 border-sky-100 bg-white flex items-center justify-center">
+    <div id="typingAnim" class="w-full h-full"></div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sky-500 font-semibold tracking-wide uppercase">Why TapType?</p>
+        <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">A Typing Experience Built for Flow</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
+          TapType is more than a utility; it's a fundamental improvement to how you interact with your keyboard.
+        </p>
+        <div class="mt-16 grid md:grid-cols-3 gap-10">
+          <!-- Feature 1 -->
+          <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-slate-900">Intuitive Control</h3>
+            <p class="mt-2 text-base text-slate-600">Your fingers already know the difference between a tap and a press. TapType simply listens. Tap for 'a', hold for 'A'. It's that natural.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-slate-900">Seamless Integration</h3>
+            <p class="mt-2 text-base text-slate-600">TapType runs silently in your system tray. It starts with Windows and stays out of your way. Toggle it on or off with a single click.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2.25 2.25 0 003.182 0l-7.24-7.24a.75.75 0 00-1.06 0L8.84 14.25a.75.75 0 01-1.06 0l-2.24-2.24a.75.75 0 00-1.061 0l-2.24 2.24a.75.75 0 000 1.06l4.5 4.5a.75.75 0 001.06 0l2.24-2.24a.75.75 0 011.06 0l2.24 2.24a.75.75 0 001.06 0z" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-slate-900">Feather-Light Performance</h3>
+            <p class="mt-2 text-base text-slate-600">Engineered for efficiency, TapType uses less than 5MB of RAM. You get all the power without any performance cost to your system.</p>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- ===============================
-    FEATURES SECTION
-    ================================ -->
-    <section id="features" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-teal-500 font-semibold tracking-wide uppercase">Why TapType?</p>
-            <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">
-                A Typing Experience Built for Flow
-            </h2>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
-                TapType is more than a utility; it's a fundamental improvement to how you interact with your keyboard.
-            </p>
 
-            <div class="mt-16 grid md:grid-cols-3 gap-10">
-                <!-- Feature 1 -->
-                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-teal-100 text-teal-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                    </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Intuitive Control</h3>
-                    <p class="mt-2 text-base text-slate-600">Your fingers already know the difference between a tap and a press. TapType simply listens. Tap for 'a', hold for 'A'. It's that natural.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-teal-100 text-teal-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                    </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Seamless Integration</h3>
-                    <p class="mt-2 text-base text-slate-600">TapType runs silently in your system tray. It starts with Windows and stays out of your way. Toggle it on or off with a single click.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-teal-100 text-teal-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2.25 2.25 0 003.182 0l-7.24-7.24a.75.75 0 00-1.06 0L8.84 14.25a.75.75 0 01-1.06 0l-2.24-2.24a.75.75 0 00-1.061 0l-2.24 2.24a.75.75 0 000 1.06l4.5 4.5a.75.75 0 001.06 0l2.24-2.24a.75.75 0 011.06 0l2.24 2.24a.75.75 0 001.06 0z" /></svg>
-                    </div>
-                    <h3 class="mt-5 text-xl font-bold text-slate-900">Feather-Light Performance</h3>
-                    <p class="mt-2 text-base text-slate-600">Engineered for efficiency, TapType uses less than 5MB of RAM. You get all the power without any performance cost to your system.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===============================
-    HOW IT WORKS SECTION
-    ================================ -->
+    <!-- How It Works Section -->
     <section id="how-it-works" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p class="text-teal-500 font-semibold tracking-wide uppercase">Get Started in Seconds</p>
-                <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">
-                    Effortless Setup
-                </h2>
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
-                    Go from download to smart typing in under a minute. Here's how simple it is.
-                </p>
-            </div>
-
-            <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <!-- Step 1 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl">
-                    <div class="text-4xl font-extrabold text-teal-200">01</div>
-                    <h3 class="mt-4 font-bold text-lg text-slate-900">Download the Installer</h3>
-                    <p class="mt-2 text-slate-600">Click the download button to get the `TapTypeInstaller.exe` file. It's safe and verified.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl">
-                    <div class="text-4xl font-extrabold text-teal-200">02</div>
-                    <h3 class="mt-4 font-bold text-lg text-slate-900">Run & Install</h3>
-                    <p class="mt-2 text-slate-600">Open the downloaded file and click "Install". The setup is lightning-fast and requires no configuration.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl">
-                    <div class="text-4xl font-extrabold text-teal-200">03</div>
-                    <h3 class="mt-4 font-bold text-lg text-slate-900">Find in System Tray</h3>
-                    <p class="mt-2 text-slate-600">TapType lives in your system tray (bottom-right corner). Right-click its icon to toggle it ON/OFF or exit.</p>
-                </div>
-                <!-- Step 4 -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl">
-                    <div class="text-4xl font-extrabold text-teal-200">04</div>
-                    <h3 class="mt-4 font-bold text-lg text-slate-900">Start Smart Typing</h3>
-                    <p class="mt-2 text-slate-600">That's it! Open any application and try it out. Tap for lowercase, hold for UPPERCASE. Enjoy the flow!</p>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <p class="text-sky-500 font-semibold tracking-wide uppercase">Get Started in Seconds</p>
+          <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">Effortless Setup</h2>
+          <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">Go from download to smart typing in under a minute. Here's how simple it is.</p>
         </div>
-    </section>
 
+        <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <!-- Steps 1-4 -->
+          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+            <div class="text-4xl font-extrabold text-sky-300">01</div>
+            <h3 class="mt-4 font-bold text-lg text-slate-900">Download the Installer</h3>
+            <p class="mt-2 text-slate-600">Click the download button to get the `TapTypeInstaller.exe` file. It's safe and verified.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+            <div class="text-4xl font-extrabold text-sky-300">02</div>
+            <h3 class="mt-4 font-bold text-lg text-slate-900">Run & Install</h3>
+            <p class="mt-2 text-slate-600">Open the downloaded file and click "Install". The setup is lightning-fast and requires no configuration.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+            <div class="text-4xl font-extrabold text-sky-300">03</div>
+            <h3 class="mt-4 font-bold text-lg text-slate-900">Find in System Tray</h3>
+            <p class="mt-2 text-slate-600">TapType lives in your system tray. Right-click to toggle or exit.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+            <div class="text-4xl font-extrabold text-sky-300">04</div>
+            <h3 class="mt-4 font-bold text-lg text-slate-900">Start Smart Typing</h3>
+            <p class="mt-2 text-slate-600">Open any app and try it out. Tap for lowercase, hold for UPPERCASE.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ===============================
-  FOOTER
-  ================================ -->
+  <!-- Footer -->
   <footer class="bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-slate-500">
-        © 2025 TapType • Designed and built with ❤️ by Soham.
-      </p>
+      <p class="text-slate-500">© 2025 TapType • Designed and built with ❤️ by Soham.</p>
     </div>
   </footer>
-
-  <!-- ===============================
-  JAVASCRIPT FOR NAVBAR
-  ================================ -->
+<script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+  <!-- Navbar Scroll Script -->
   <script>
+    lottie.loadAnimation({
+    container: document.getElementById('typingAnim'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets3.lottiefiles.com/packages/lf20_qp1q7mct.json' // Replace with a better typing animation if you want
+  });
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
