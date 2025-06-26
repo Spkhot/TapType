@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – The Story Behind TapType</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Learn the story behind TapType, the smart typing assistant for Windows. Discover our mission to create a faster, more ergonomic, and intuitive typing experience for everyone.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Use the modern 'Inter' font family */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Style for the scrolled navbar */
+    #navbar.scrolled {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- ===============================
+  HEADER & NAVIGATION (Identical to Homepage)
+  ================================ -->
+  <header>
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="index.html" class="text-2xl font-bold text-slate-900">
+              TapType<span class="text-teal-500">.</span>
+            </a>
+          </div>
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html#features" class="text-slate-600 hover:text-teal-500 transition-colors duration-200 font-medium">Features</a>
+            <a href="index.html#how-it-works" class="text-slate-600 hover:text-teal-500 transition-colors duration-200 font-medium">How It Works</a>
+            <a href="about.html" class="text-teal-500 font-semibold">About</a>
+          </div>
+          <!-- CTA Button -->
+          <div>
+            <a href="./TapTypeInstaller.exe" download class="hidden md:inline-block bg-teal-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-teal-600 transition-all duration-300 hover:shadow-lg">
+              Download for Windows
+            </a>
+            <!-- Mobile Menu Button (optional) -->
+            <button class="md:hidden text-slate-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===============================
+    PAGE HEADER
+    ================================ -->
+    <section class="bg-white pt-32 pb-20 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+                We're on a Mission to
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-600">Fix Typing.</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-slate-600">
+                TapType was born from a simple idea: the modern keyboard workflow is broken. We built a tool to make it smarter, faster, and more intuitive for everyone.
+            </p>
+        </div>
+    </section>
+    
+    <!-- ===============================
+    THE STORY SECTION
+    ================================ -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
+            <!-- Left Column: Image/Creator -->
+            <div class="flex justify-center">
+    <div class="relative">
+        <!-- Replaced placeholder with a real photo of Soham Khot -->
+        <div class="w-80 h-96 bg-slate-200 rounded-2xl overflow-hidden shadow-lg">
+            <img src="images/soham.png" alt="Soham Khot" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+            <p class="font-bold text-slate-900">Soham Khot</p>
+            <p class="text-sm text-teal-600 font-medium">Creator of TapType</p>
+        </div>
+    </div>
+</div>
+
+
+            <!-- Right Column: The Narrative -->
+            <div>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">From Frustration to Flow</h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                    It started with a simple observation: why do we still rely on the archaic Shift key? In an age of smart devices and intuitive interfaces, constantly reaching for a modifier key felt clumsy and inefficient. It breaks your typing rhythm and adds thousands of unnecessary keystrokes to your day.
+                </p>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    <strong>TapType is the answer.</strong> It's a lightweight Windows utility designed to be completely unobtrusive. By intelligently distinguishing between a quick tap for lowercase and a brief hold for uppercase, it eliminates the need for the Shift key entirely. This small change has a massive impact on typing speed, comfort, and overall productivity.
+                </p>
+                <div class="mt-6 bg-teal-50 border-l-4 border-teal-400 p-4 rounded-r-lg">
+                    <p class="text-slate-700 font-medium">Our goal is to create software that feels like a natural extension of your thoughts—powerful, invisible, and incredibly efficient.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+    CORE PHILOSOPHY SECTION
+    ================================ -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+                Our Core Philosophy
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
+                Everything we build is guided by these three principles.
+            </p>
+
+            <div class="mt-16 grid md:grid-cols-3 gap-10">
+                <!-- Principle 1: Simplicity -->
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-teal-100 text-teal-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2.25 2.25 0 003.182 0l-7.24-7.24a.75.75 0 00-1.06 0L8.84 14.25a.75.75 0 01-1.06 0l-2.24-2.24a.75.75 0 00-1.061 0l-2.24 2.24a.75.75 0 000 1.06l4.5 4.5a.75.75 0 001.06 0l2.24-2.24a.75.75 0 011.06 0l2.24 2.24a.75.75 0 001.06 0z" /></svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Radical Simplicity</h3>
+                    <p class="mt-2 text-base text-slate-600">No complex settings or UI. Install it, and it just works. Control is simple and accessible from the system tray when you need it.</p>
+                </div>
+                <!-- Principle 2: Efficiency -->
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-teal-100 text-teal-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Peak Performance</h3>
+                    <p class="mt-2 text-base text-slate-600">Built in C++ for minimal resource usage (<5MB RAM). TapType never slows your system down, ensuring a snappy experience.</p>
+                </div>
+                <!-- Principle 3: Ergonomics -->
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-teal-100 text-teal-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.042 21.672L13.684 16.6m0 0l-2.51-2.222a2.25 2.25 0 00-3.184 0l-2.51 2.222m0 0A2.25 2.25 0 015.605 16.6m0 0v1.111A2.25 2.25 0 013.355 20.01v-1.111a2.25 2.25 0 012.25-2.25zM15.042 21.672L13.684 16.6m0 0l2.51 2.222a2.25 2.25 0 003.184 0l2.51-2.222m0 0A2.25 2.25 0 0018.395 16.6m0 0v1.111A2.25 2.25 0 0020.645 20.01v-1.111a2.25 2.25 0 00-2.25-2.25zM15.042 21.672L13.684 16.6M12 9.75a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5z" /></svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">User-Centric Design</h3>
+                    <p class="mt-2 text-base text-slate-600">We prioritize your comfort and workflow. Reducing awkward hand movements makes typing more pleasant and sustainable long-term.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+    CTA SECTION
+    ================================ -->
+    <section class="bg-gradient-to-r from-teal-500 to-cyan-600">
+        <div class="max-w-4xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                <span class="block">Ready to change the way you type?</span>
+            </h2>
+            <p class="mt-4 text-lg leading-6 text-teal-100">
+                Join thousands of users who have streamlined their workflow. Download TapType for free today.
+            </p>
+            <a href="./TapTypeInstaller.exe" download class="mt-8 w-full inline-flex items-center justify-center px-8 py-4 border border-transparent rounded-lg shadow-md text-base font-bold text-teal-600 bg-white hover:bg-teal-50 sm:w-auto transition-transform hover:scale-105">
+                Download for Windows
+            </a>
+        </div>
+    </section>
+
+  </main>
+
+  <!-- ===============================
+  FOOTER (Identical to Homepage)
+  ================================ -->
+  <footer class="bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-slate-500">
+        © 2025 TapType • Designed and built with ❤️ by Soham.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===============================
+  JAVASCRIPT FOR NAVBAR (Identical to Homepage)
+  ================================ -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
