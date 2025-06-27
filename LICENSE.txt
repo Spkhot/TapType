@@ -1,0 +1,9 @@
+TapType Software License Agreement
+
+By installing and using this software, you agree to the following terms:
+
+- You may use TapType for personal or educational use for free.
+- You may not redistribute or reverse-engineer this software.
+- The software is provided "as is" without warranty.
+
+© 2025 Soham Khot
