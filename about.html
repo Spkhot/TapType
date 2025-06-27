@@ -4,13 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us – The Story Behind TapType</title>
-
+  
+  <!-- Favicon -->
   <link rel="icon" href="images/logo.png">
 
+  <!-- SEO Meta Tags -->
   <meta name="description" content="Learn the story behind TapType, the smart typing assistant for Windows. Discover our mission to create a faster, more ergonomic, and intuitive typing experience for everyone.">
-
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,150 +28,195 @@
       backdrop-filter: blur(12px);
       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
+    .overflow-hidden {
+        overflow: hidden;
+    }
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-800 antialiased">
 
-  <!-- Navbar -->
+  <!-- ===============================
+  HEADER & NAVIGATION
+  ================================ -->
   <header>
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
           <div class="flex-shrink-0">
             <a href="index.html" class="text-2xl font-bold text-slate-900">
               TapType<span class="text-sky-500">.</span>
             </a>
           </div>
+          
+          <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html" class="text-slate-600 hover:text-sky-500 font-medium transition-colors duration-200">Home</a>
-            <a href="index.html#features" class="text-slate-600 hover:text-sky-500 font-medium transition-colors duration-200">Features</a>
-            <a href="index.html#how-it-works" class="text-slate-600 hover:text-sky-500 font-medium transition-colors duration-200">How It Works</a>
+             <a href="index.html" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">Home</a>
+            <a href="index.html#features" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">Features</a>
+            <a href="index.html#how-it-works" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">How It Works</a>
             <a href="about.html" class="text-sky-500 font-semibold">About</a>
           </div>
-          <div>
-            <a href="./TapTypeInstaller.exe" download class="hidden md:inline-block bg-sky-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-sky-600 transition-all duration-300 hover:shadow-lg">
-              Download for Windows
+          
+          <!-- Desktop CTA & Mobile Menu Button -->
+          <div class="flex items-center">
+             <a href="./TapTypeInstaller.exe" download class="hidden md:inline-block bg-sky-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-sky-600 transition-all duration-300 hover:shadow-lg">
+              Download
             </a>
-            <button class="md:hidden text-slate-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden ml-4 p-2 text-slate-600 rounded-md hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
+                <span class="sr-only">Open main menu</span>
+                <!-- Hamburger Icon -->
+                <svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <!-- Close Icon -->
+                 <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
             </button>
           </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu, show/hide based on menu state -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="h-screen w-screen bg-white pt-12 pb-3 space-y-1 text-center">
+            <a href="index.html#features" class="block px-3 py-4 text-2xl font-medium text-slate-600 hover:text-sky-500 hover:bg-slate-50">Features</a>
+            <a href="index.html#how-it-works" class="block px-3 py-4 text-2xl font-medium text-slate-600 hover:text-sky-500 hover:bg-slate-50">How It Works</a>
+            <a href="about.html" class="block px-3 py-4 text-2xl font-medium text-sky-500 bg-sky-50">About</a>
+            <div class="pt-12">
+                <a href="./TapTypeInstaller.exe" download class="inline-block w-3/4 bg-sky-500 text-white px-8 py-4 text-lg rounded-lg font-bold shadow-lg hover:bg-sky-600">
+                  ⬇️ Download TapType
+                </a>
+            </div>
         </div>
       </div>
     </nav>
   </header>
 
   <main>
-    <!-- Page Header -->
-    <section class="bg-white pt-32 pb-20 text-center">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-          We're on a Mission to
-          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">Fix Typing.</span>
-        </h1>
-        <p class="mt-6 text-lg md:text-xl text-slate-600">
-          TapType was born from a simple idea: the modern keyboard workflow is broken. We built a tool to make it smarter, faster, and more intuitive for everyone.
-        </p>
-      </div>
+    <!-- ===============================
+    PAGE HEADER
+    ================================ -->
+    <section class="bg-white pt-28 pb-16 md:pt-32 md:pb-20 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+                We're on a Mission to
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">Fix Typing.</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-slate-600">
+                TapType was born from a simple idea: the modern keyboard workflow is broken. We built a tool to make it smarter, faster, and more intuitive for everyone.
+            </p>
+        </div>
     </section>
-
-    <!-- The Story -->
-    <section class="py-24 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
-        <div class="flex justify-center">
-          <div class="relative">
-            <div class="w-80 h-96 bg-slate-200 rounded-2xl overflow-hidden shadow-lg">
-              <img src="images/soham.jpg" alt="Soham Khot" class="w-full h-full object-cover" />
+    
+    <!-- ===============================
+    THE STORY SECTION
+    ================================ -->
+    <section class="py-20 md:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-16 items-center">
+          <div class="flex justify-center order-1">
+            <div class="relative">
+              <div class="w-64 h-80 sm:w-80 sm:h-96 bg-sky-100 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden">
+                <img src="images/soham.jpg" alt="Soham Khot" class="object-cover w-full h-full">
+              </div>
+              <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                <p class="font-bold text-slate-900">Founders</p>
+                <p class="text-sm text-sky-600 font-medium">Creators of TapType</p>
+              </div>
             </div>
-            <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
-              <p class="font-bold text-slate-900">TapType.</p>
-              <p class="text-sm text-sky-600 font-medium">Creators.</p>
+          </div>
+          <div class="order-2 text-center md:text-left">
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-4">From Frustration to Flow</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-6">
+              It started with a simple observation: why do we still rely on the archaic Shift key? In an age of smart devices and intuitive interfaces, constantly reaching for a modifier key felt clumsy and inefficient.
+            </p>
+            <p class="text-lg text-slate-600 leading-relaxed">
+              <strong>TapType is the answer.</strong> It's a lightweight Windows utility that intelligently distinguishes between a tap for lowercase and a hold for uppercase, eliminating the need for the Shift key.
+            </p>
+            <div class="mt-6 bg-sky-50 border-l-4 border-sky-400 p-4 rounded-r-lg">
+              <p class="text-slate-700 font-medium">Our goal is to create software that feels like a natural extension of your thoughts—powerful, invisible, and efficient.</p>
             </div>
           </div>
         </div>
+      </section>
 
-        <div>
-          <h2 class="text-3xl font-extrabold text-slate-900 mb-4">From Frustration to Flow</h2>
-          <p class="text-lg text-slate-600 leading-relaxed mb-6">
-            It started with a simple observation: why do we still rely on the archaic Shift key? In an age of smart devices and intuitive interfaces, constantly reaching for a modifier key felt clumsy and inefficient.
-          </p>
-          <p class="text-lg text-slate-600 leading-relaxed">
-            <strong>TapType is the answer.</strong> It's a lightweight Windows utility that eliminates the need for Shift. Tap for lowercase, hold for UPPERCASE. It’s seamless, fast, and efficient.
-          </p>
-          <div class="mt-6 bg-sky-50 border-l-4 border-sky-400 p-4 rounded-r-lg">
-            <p class="text-slate-700 font-medium">Our goal is to create software that feels like a natural extension of your thoughts—powerful, invisible, and incredibly efficient.</p>
-          </div>
+    <!-- ===============================
+    CORE PHILOSOPHY SECTION
+    ================================ -->
+    <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+                Our Core Philosophy
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
+                Everything we build is guided by these three principles.
+            </p>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Principle 1 -->
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2.25 2.25 0 003.182 0l-7.24-7.24a.75.75 0 00-1.06 0L8.84 14.25a.75.75 0 01-1.06 0l-2.24-2.24a.75.75 0 00-1.061 0l-2.24 2.24a.75.75 0 000 1.06l4.5 4.5a.75.75 0 001.06 0l2.24-2.24a.75.75 0 011.06 0l2.24 2.24a.75.75 0 001.06 0z" /></svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Radical Simplicity</h3>
+                    <p class="mt-2 text-base text-slate-600">No complex settings or UI. Install it, and it just works. Control is simple and accessible from the system tray when you need it.</p>
+                </div>
+                <!-- Principle 2 -->
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Peak Performance</h3>
+                    <p class="mt-2 text-base text-slate-600">Built in C++ for minimal resource usage (<5MB RAM). TapType never slows your system down, ensuring a snappy experience.</p>
+                </div>
+                <!-- Principle 3 -->
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.042 21.672L13.684 16.6m0 0l-2.51-2.222a2.25 2.25 0 00-3.184 0l-2.51 2.222m0 0A2.25 2.25 0 015.605 16.6m0 0v1.111A2.25 2.25 0 013.355 20.01v-1.111a2.25 2.25 0 012.25-2.25zM15.042 21.672L13.684 16.6m0 0l2.51 2.222a2.25 2.25 0 003.184 0l2.51-2.222m0 0A2.25 2.25 0 0018.395 16.6m0 0v1.111A2.25 2.25 0 0020.645 20.01v-1.111a2.25 2.25 0 00-2.25-2.25zM15.042 21.672L13.684 16.6M12 9.75a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5z" /></svg>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">User-Centric Design</h3>
+                    <p class="mt-2 text-base text-slate-600">We prioritize your comfort and workflow. Reducing awkward hand movements makes typing more pleasant and sustainable long-term.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Philosophy -->
-    <section class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Our Core Philosophy</h2>
-        <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">Everything we build is guided by these three principles.</p>
-
-        <div class="mt-16 grid md:grid-cols-3 gap-10">
-          <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-            <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2.25 2.25 0 003.182 0l-7.24-7.24a.75.75 0 00-1.06 0L8.84 14.25a.75.75 0 01-1.06 0l-2.24-2.24a.75.75 0 00-1.061 0l-2.24 2.24a.75.75 0 000 1.06l4.5 4.5a.75.75 0 001.06 0l2.24-2.24a.75.75 0 011.06 0l2.24 2.24a.75.75 0 001.06 0z" />
-              </svg>
-            </div>
-            <h3 class="mt-5 text-xl font-bold text-slate-900">Radical Simplicity</h3>
-            <p class="mt-2 text-base text-slate-600">Install it and it just works. Control everything from the system tray when you need it.</p>
-          </div>
-
-          <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-            <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h3 class="mt-5 text-xl font-bold text-slate-900">Peak Performance</h3>
-            <p class="mt-2 text-base text-slate-600">Built in C++, using less than 5MB RAM. It never slows your system down.</p>
-          </div>
-
-          <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-            <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path d="M12 9.75a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5zM5.605 16.6v1.111A2.25 2.25 0 013.355 20.01v-1.111a2.25 2.25 0 012.25-2.25h1.111a2.25 2.25 0 012.25 2.25v1.111a2.25 2.25 0 01-2.25 2.25h-1.111A2.25 2.25 0 013.355 20.01M18.395 16.6v1.111a2.25 2.25 0 002.25 2.25v-1.111a2.25 2.25 0 00-2.25-2.25h-1.111a2.25 2.25 0 00-2.25 2.25v1.111a2.25 2.25 0 002.25 2.25h1.111a2.25 2.25 0 002.25-2.25" />
-              </svg>
-            </div>
-            <h3 class="mt-5 text-xl font-bold text-slate-900">User-Centric Design</h3>
-            <p class="mt-2 text-base text-slate-600">Minimizing awkward movements makes typing more enjoyable and ergonomic long-term.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- ===============================
+    CTA SECTION
+    ================================ -->
     <section class="bg-gradient-to-r from-sky-500 to-blue-600">
-      <div class="max-w-4xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-          <span class="block">Ready to change the way you type?</span>
-        </h2>
-        <p class="mt-4 text-lg leading-6 text-sky-100">
-          Join thousands of users who’ve streamlined their workflow. Download TapType today.
-        </p>
-        <a href="./TapTypeInstaller.exe" download class="mt-8 w-full inline-flex items-center justify-center px-8 py-4 border border-transparent rounded-lg shadow-md text-base font-bold text-sky-600 bg-white hover:bg-sky-50 sm:w-auto transition-transform hover:scale-105">
-          Download for Windows
-        </a>
-      </div>
+        <div class="max-w-4xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                <span class="block">Ready to change the way you type?</span>
+            </h2>
+            <p class="mt-4 text-lg leading-6 text-sky-100">
+                Download TapType for free today and streamline your workflow.
+            </p>
+            <a href="./TapTypeInstaller.exe" download class="mt-8 w-full inline-flex items-center justify-center px-8 py-4 border border-transparent rounded-lg shadow-md text-base font-bold text-sky-600 bg-white hover:bg-sky-50 sm:w-auto transition-transform hover:scale-105">
+                Download for Windows
+            </a>
+        </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ===============================
+  FOOTER
+  ================================ -->
   <footer class="bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-slate-500">© 2025 TapType • Designed and built with ❤️ by Soham.</p>
+      <p class="text-slate-500">
+        © 2025 TapType • Designed and built with ❤️ by Soham.
+      </p>
     </div>
   </footer>
 
+  <!-- ===============================
+  JAVASCRIPT FOR NAVIGATION
+  ================================ -->
   <script>
+    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -175,6 +224,19 @@
       } else {
         navbar.classList.remove('scrolled');
       }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden'); // Prevent background scroll
     });
   </script>
 

@@ -24,6 +24,10 @@
       backdrop-filter: blur(12px);
       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
+    /* Prevent scrolling when mobile menu is open */
+    body.overflow-hidden {
+      overflow: hidden;
+    }
   </style>
 </head>
 
@@ -34,26 +38,52 @@
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
           <div class="flex-shrink-0">
             <a href="#home" class="text-2xl font-bold text-slate-900">
               TapType<span class="text-sky-500">.</span>
             </a>
           </div>
+          
+          <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-8">
             <a href="#features" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">Features</a>
             <a href="#how-it-works" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">How It Works</a>
             <a href="about.html" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">About</a>
           </div>
-          <div>
-            <a href="./TapTypeInstaller.exe" download class="hidden md:inline-block bg-sky-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-sky-600 transition-all duration-300 hover:shadow-lg">
+          
+          <!-- Desktop CTA & Mobile Menu Button -->
+          <div class="flex items-center">
+             <a href="./TapTypeInstaller.exe" download class="hidden md:inline-block bg-sky-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-sky-600 transition-all duration-300 hover:shadow-lg">
               Download for Windows
             </a>
-            <button class="md:hidden text-slate-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden ml-4 p-2 text-slate-600 rounded-md hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
+                <span class="sr-only">Open main menu</span>
+                <!-- Hamburger Icon -->
+                <svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <!-- Close Icon -->
+                 <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
             </button>
           </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu, show/hide based on menu state -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="h-screen w-screen bg-white pt-12 pb-3 space-y-1 text-center">
+            <a href="#features" class="block px-3 py-4 text-2xl font-medium text-slate-600 hover:text-sky-500 hover:bg-slate-50 mobile-link">Features</a>
+            <a href="#how-it-works" class="block px-3 py-4 text-2xl font-medium text-slate-600 hover:text-sky-500 hover:bg-slate-50 mobile-link">How It Works</a>
+            <a href="about.html" class="block px-3 py-4 text-2xl font-medium text-slate-600 hover:text-sky-500 hover:bg-slate-50 mobile-link">About</a>
+            <div class="pt-12">
+                <a href="./TapTypeInstaller.exe" download class="inline-block w-3/4 bg-sky-500 text-white px-8 py-4 text-lg rounded-lg font-bold shadow-lg hover:bg-sky-600">
+                  ⬇️ Download TapType
+                </a>
+            </div>
         </div>
       </div>
     </nav>
@@ -61,8 +91,9 @@
 
   <main>
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center">
+    <section id="home" class="relative min-h-screen flex items-center pt-20 md:pt-0">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Text content (appears first on mobile) -->
         <div class="text-center md:text-left">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900">
             The Last Time You'll
@@ -80,55 +111,44 @@
             </a>
           </div>
         </div>
+        <!-- Lottie Animation (appears second on mobile) -->
         <div class="flex justify-center items-center">
-          <!-- Right Column: Smart Typing Animation -->
-<div class="flex justify-center items-center">
-  <div class="w-full max-w-sm h-96 rounded-2xl shadow-2xl overflow-hidden border-4 border-sky-100 bg-white flex items-center justify-center">
-    <div id="typingAnim" class="w-full h-full"></div>
-  </div>
-</div>
-
+          <div class="w-full max-w-sm h-80 sm:h-96 rounded-2xl shadow-2xl overflow-hidden border-4 border-sky-100 bg-white flex items-center justify-center">
+            <div id="typingAnim" class="w-full h-full"></div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-24 bg-white">
+    <section id="features" class="py-20 md:py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="text-sky-500 font-semibold tracking-wide uppercase">Why TapType?</p>
         <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">A Typing Experience Built for Flow</h2>
         <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
           TapType is more than a utility; it's a fundamental improvement to how you interact with your keyboard.
         </p>
-        <div class="mt-16 grid md:grid-cols-3 gap-10">
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10">
           <!-- Feature 1 -->
           <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
             <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
             </div>
             <h3 class="mt-5 text-xl font-bold text-slate-900">Intuitive Control</h3>
             <p class="mt-2 text-base text-slate-600">Your fingers already know the difference between a tap and a press. TapType simply listens. Tap for 'a', hold for 'A'. It's that natural.</p>
           </div>
-
           <!-- Feature 2 -->
           <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
             <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             </div>
             <h3 class="mt-5 text-xl font-bold text-slate-900">Seamless Integration</h3>
             <p class="mt-2 text-base text-slate-600">TapType runs silently in your system tray. It starts with Windows and stays out of your way. Toggle it on or off with a single click.</p>
           </div>
-
           <!-- Feature 3 -->
           <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
             <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2.25 2.25 0 003.182 0l-7.24-7.24a.75.75 0 00-1.06 0L8.84 14.25a.75.75 0 01-1.06 0l-2.24-2.24a.75.75 0 00-1.061 0l-2.24 2.24a.75.75 0 000 1.06l4.5 4.5a.75.75 0 001.06 0l2.24-2.24a.75.75 0 011.06 0l2.24 2.24a.75.75 0 001.06 0z" />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2.25 2.25 0 003.182 0l-7.24-7.24a.75.75 0 00-1.06 0L8.84 14.25a.75.75 0 01-1.06 0l-2.24-2.24a.75.75 0 00-1.061 0l-2.24 2.24a.75.75 0 000 1.06l4.5 4.5a.75.75 0 001.06 0l2.24-2.24a.75.75 0 011.06 0l2.24 2.24a.75.75 0 001.06 0z" /></svg>
             </div>
             <h3 class="mt-5 text-xl font-bold text-slate-900">Feather-Light Performance</h3>
             <p class="mt-2 text-base text-slate-600">Engineered for efficiency, TapType uses less than 5MB of RAM. You get all the power without any performance cost to your system.</p>
@@ -138,16 +158,14 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-24 bg-slate-50">
+    <section id="how-it-works" class="py-20 md:py-24 bg-slate-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <p class="text-sky-500 font-semibold tracking-wide uppercase">Get Started in Seconds</p>
           <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">Effortless Setup</h2>
           <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">Go from download to smart typing in under a minute. Here's how simple it is.</p>
         </div>
-
-        <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          <!-- Steps 1-4 -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
             <div class="text-4xl font-extrabold text-sky-300">01</div>
             <h3 class="mt-4 font-bold text-lg text-slate-900">Download the Installer</h3>
@@ -179,16 +197,20 @@
       <p class="text-slate-500">© 2025 TapType • Designed and built with ❤️ by Soham.</p>
     </div>
   </footer>
-<script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
-  <!-- Navbar Scroll Script -->
+
+  <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+  
   <script>
+    // Lottie Animation
     lottie.loadAnimation({
-    container: document.getElementById('typingAnim'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'https://assets3.lottiefiles.com/packages/lf20_qp1q7mct.json' // Replace with a better typing animation if you want
-  });
+      container: document.getElementById('typingAnim'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets3.lottiefiles.com/packages/lf20_qp1q7mct.json'
+    });
+    
+    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -196,6 +218,31 @@
       } else {
         navbar.classList.remove('scrolled');
       }
+    });
+
+    // --- Mobile Menu Toggle Script ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden');
+    };
+
+    mobileMenuButton.addEventListener('click', toggleMenu);
+
+    // Close menu when a link is clicked
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('hidden')) {
+                toggleMenu();
+            }
+        });
     });
   </script>
 
