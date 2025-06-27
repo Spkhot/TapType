@@ -44,6 +44,13 @@
   </style>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TZFDZJYFZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2TZFDZJYFZ');
+</script>
 </head>
  
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -261,11 +268,6 @@
   <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
   
   <script>
-     window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2TZFDZJYFZ');
     // Lottie Animation
     lottie.loadAnimation({
       container: document.getElementById('typingAnim'),
