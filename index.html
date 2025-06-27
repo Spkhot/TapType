@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TapType – Revolutionize Your Typing Workflow</title>
+  <title>TapType – Smarter Typing, No Shift Key Needed</title>
 
   <link rel="icon" href="images/logo.png">
 
@@ -157,8 +157,40 @@
       </div>
     </section>
 
+   <!-- ===== START: UPDATED VIDEO SECTION ===== -->
+<section id="video-demo" class="py-20 md:py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-sky-500 font-semibold tracking-wide uppercase">A Quick Look</p>
+    <h2 class="mt-2 text-3xl font-extrabold text-slate-900 sm:text-4xl">See TapType in Action</h2>
+    <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
+      Words can only say so much. Watch this short demo to see how TapType will truly change your workflow.
+    </p>
+
+    <!-- Video Player Container -->
+    <div id="video-container" class="relative mt-16 max-w-4xl mx-auto rounded-2xl shadow-2xl overflow-hidden cursor-pointer group">
+      <!-- Video Thumbnail (will be replaced on click) -->
+      <img src="https://img.youtube.com/vi/QOR5MLIS7Kk/maxresdefault.jpg" 
+           alt="TapType Demo Video Thumbnail"
+           class="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105 pointer-events-none">
+
+      <!-- Play Button Overlay -->
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 transition-all duration-300 group-hover:bg-opacity-20 pointer-events-none">
+        <div class="h-20 w-20 lg:h-24 lg:w-24 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30 transform transition-transform group-hover:scale-110 pointer-events-none">
+          <svg class="h-10 w-10 lg:h-12 lg:w-12 text-white ml-1 pointer-events-none" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 6V18L18 12L7 6Z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== END: UPDATED VIDEO SECTION ===== -->
+
+    <!-- ===== END: NEW VIDEO SECTION ===== -->
+
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 md:py-24 bg-slate-50">
+    <!-- NOTE: Changed background to bg-white for better visual flow -->
+    <section id="how-it-works" class="py-20 md:py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <p class="text-sky-500 font-semibold tracking-wide uppercase">Get Started in Seconds</p>
@@ -166,22 +198,22 @@
           <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">Go from download to smart typing in under a minute. Here's how simple it is.</p>
         </div>
         <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+          <div class="bg-slate-50 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
             <div class="text-4xl font-extrabold text-sky-300">01</div>
             <h3 class="mt-4 font-bold text-lg text-slate-900">Download the Installer</h3>
             <p class="mt-2 text-slate-600">Click the download button to get the `TapTypeInstaller.exe` file. It's safe and verified.</p>
           </div>
-          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+          <div class="bg-slate-50 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
             <div class="text-4xl font-extrabold text-sky-300">02</div>
             <h3 class="mt-4 font-bold text-lg text-slate-900">Run & Install</h3>
             <p class="mt-2 text-slate-600">Open the downloaded file and click "Install". The setup is lightning-fast and requires no configuration.</p>
           </div>
-          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+          <div class="bg-slate-50 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
             <div class="text-4xl font-extrabold text-sky-300">03</div>
             <h3 class="mt-4 font-bold text-lg text-slate-900">Find in System Tray</h3>
             <p class="mt-2 text-slate-600">TapType lives in your system tray. Right-click to toggle or exit.</p>
           </div>
-          <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+          <div class="bg-slate-50 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
             <div class="text-4xl font-extrabold text-sky-300">04</div>
             <h3 class="mt-4 font-bold text-lg text-slate-900">Start Smart Typing</h3>
             <p class="mt-2 text-slate-600">Open any app and try it out. Tap for lowercase, hold for UPPERCASE.</p>
@@ -244,6 +276,32 @@
             }
         });
     });
+
+    // --- YouTube Video Player Script ---
+    const videoContainer = document.getElementById('video-container');
+
+  videoContainer.addEventListener('click', () => {
+    const videoId = 'QOR5MLIS7Kk'; // your YouTube ID
+
+    // Create a wrapper that maintains 16:9 aspect ratio
+    const wrapper = document.createElement('div');
+    wrapper.className = 'relative w-full pb-[56.25%]'; // 16:9 ratio
+
+    // Create the iframe
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    iframe.className = 'absolute top-0 left-0 w-full h-full';
+    iframe.frameBorder = '0';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+
+    // Append iframe into wrapper, then into container
+    wrapper.appendChild(iframe);
+    videoContainer.innerHTML = ''; // clear thumbnail
+    videoContainer.appendChild(wrapper);
+    videoContainer.classList.remove('cursor-pointer');
+  });
+
   </script>
 
 </body>
