@@ -23,11 +23,24 @@
     body {
       font-family: 'Inter', sans-serif;
     }
-    #navbar.scrolled {
-      background-color: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    }
+    /* Enhanced navbar animation */
+#navbar {
+  transition: all 0.4s ease, transform 0.4s ease;
+}
+
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#navbar.slide-up {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
     .overflow-hidden {
         overflow: hidden;
     }
@@ -217,14 +230,29 @@
   ================================ -->
   <script>
     // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
+    let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > 50) {
+    navbar.classList.add('scrolled');
+
+    if (currentScroll > lastScrollTop) {
+      // Scrolling down
+      navbar.classList.add('slide-up');
+    } else {
+      // Scrolling up
+      navbar.classList.remove('slide-up');
+    }
+  } else {
+    navbar.classList.remove('scrolled');
+    navbar.classList.remove('slide-up');
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
 
     // Mobile menu toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
