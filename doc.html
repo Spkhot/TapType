@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation – TapType</title>
+  
+  <link rel="icon" href="images/logo.png">
+  <meta name="description" content="Official documentation for TapType. Learn how to install, use, and get the most out of the smart typing assistant for Windows.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    #navbar.scrolled {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+    body.overflow-hidden { overflow: hidden; }
+    /* Updated active sidebar link style */
+    .sidebar-link.active {
+        color: #0284c7; /* sky-600 */
+        font-weight: 600;
+        background-color: #f0f9ff; /* sky-50 */
+        border-left-color: #0ea5e9; /* sky-500 */
+    }
+  </style>
+</head>
+
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+  <!-- ===============================
+  HEADER & NAVIGATION
+  ================================ -->
+  <header>
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0"><a href="index.html" class="text-2xl font-bold text-slate-900">TapType<span class="text-sky-500">.</span></a></div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-slate-600 hover:text-sky-500 font-medium">Home</a>
+            <a href="about.html" class="text-slate-600 hover:text-sky-500 font-medium">About</a>
+            <a href="faq.html" class="text-slate-600 hover:text-sky-500 font-medium">FAQ</a>
+            <a href="docs.html" class="text-sky-500 font-semibold">Documentation</a>
+          </div>
+          <div class="flex items-center">
+             <a href="./TapTypeInstaller.exe" download class="hidden md:inline-block bg-sky-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-sky-600">Download</a>
+            <button id="mobile-menu-button" class="md:hidden ml-4 p-2 text-slate-600 rounded-md"><svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg><svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden"><div class="h-screen w-screen bg-white pt-12 pb-3 space-y-1 text-center"><a href="index.html" class="block px-3 py-4 text-2xl font-medium text-slate-600 hover:text-sky-500 hover:bg-slate-50">Home</a><a href="about.html" class="block px-3 py-4 text-2xl font-medium text-slate-600 hover:text-sky-500 hover:bg-slate-50">About</a><a href="faq.html" class="block px-3 py-4 text-2xl font-medium text-slate-600 hover:text-sky-500 hover:bg-slate-50">FAQ</a><a href="docs.html" class="block px-3 py-4 text-2xl font-medium text-sky-500 bg-sky-50">Documentation</a><div class="pt-12"><a href="./TapTypeInstaller.exe" download class="inline-block w-3/4 bg-sky-500 text-white px-8 py-4 text-lg rounded-lg font-bold shadow-lg">⬇️ Download TapType</a></div></div></div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="bg-gradient-to-b from-white to-slate-50 pt-28 pb-16 md:pt-32 md:pb-20 text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+          Developer Documentation
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-slate-600">
+          Your complete guide to understanding, installing, and using TapType.
+        </p>
+      </div>
+    </section>
+
+    <!-- TWO-COLUMN LAYOUT -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-12">
+        <!-- Sidebar Navigation -->
+        <aside class="hidden lg:block lg:col-span-3">
+          <nav class="sticky top-28">
+            <h3 class="font-semibold text-slate-900 tracking-tight mb-4">On this page</h3>
+            <ul class="space-y-1">
+              <li><a href="#introduction" class="sidebar-link block text-slate-600 border-l-2 border-transparent hover:border-slate-300 hover:bg-slate-200 rounded-r-md pl-4 py-2 transition-colors">Introduction</a></li>
+              <li><a href="#installation" class="sidebar-link block text-slate-600 border-l-2 border-transparent hover:border-slate-300 hover:bg-slate-200 rounded-r-md pl-4 py-2 transition-colors">Installation</a></li>
+              <li><a href="#usage" class="sidebar-link block text-slate-600 border-l-2 border-transparent hover:border-slate-300 hover:bg-slate-200 rounded-r-md pl-4 py-2 transition-colors">Usage</a></li>
+              <li><a href="#video-demo" class="sidebar-link block text-slate-600 border-l-2 border-transparent hover:border-slate-300 hover:bg-slate-200 rounded-r-md pl-4 py-2 transition-colors">Video Demo</a></li>
+              <li><a href="#faq-summary" class="sidebar-link block text-slate-600 border-l-2 border-transparent hover:border-slate-300 hover:bg-slate-200 rounded-r-md pl-4 py-2 transition-colors">FAQ Summary</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-9">
+          <div class="bg-white rounded-xl shadow-lg p-8 lg:p-12">
+            <article class="prose prose-sky max-w-none prose-a:text-sky-600 prose-a:no-underline hover:prose-a:underline prose-code:bg-sky-50 prose-code:text-sky-700 prose-code:font-medium prose-code:px-2 prose-code:py-1 prose-code:rounded-md">
+              
+              <section id="introduction">
+                <h2 class="flex items-center gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span>What is TapType?</span></h2>
+                <p>TapType is a lightweight, powerful utility for Windows designed to revolutionize your typing workflow. It intelligently distinguishes between a quick <code>tap</code> and a brief <code>hold</code> on your keyboard keys. This allows you to type lowercase letters with a tap and UPPERCASE letters with a hold, completely eliminating the need for the Shift key.</p>
+                <h3>Purpose and Philosophy</h3>
+                <p>The core goal of TapType is to enhance typing speed, comfort, and efficiency. We believe that modern computing deserves a smarter input method. By removing the dependency on an archaic modifier key, TapType reduces finger strain, minimizes hand movement, and allows for a more fluid and intuitive typing experience. It's built for developers, writers, and anyone who spends significant time at a keyboard.</p>
+              </section>
+
+              <section id="installation">
+                <h2 class="flex items-center gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg><span>Installation Guide</span></h2>
+                <p>Getting started with TapType is designed to be quick and effortless. The entire process takes less than 30 seconds.</p>
+                <ol>
+                  <li><strong>Download the Installer:</strong> Click the "Download" button on our website to get the <code>TapTypeInstaller.exe</code> file.</li>
+                  <li><strong>Run the Installer:</strong> Locate the downloaded file and double-click to run it. Windows Defender might show a security prompt; click "More info" and then "Run anyway." Our software is verified and safe.</li>
+                  <li><strong>Follow On-Screen Prompts:</strong> The installation wizard will guide you through a few simple steps. No complex configuration is needed.</li>
+                  <li><strong>Complete:</strong> Once installed, TapType will launch automatically and a new icon will appear in your system tray (bottom-right corner of your screen). You're ready to go!</li>
+                </ol>
+              </section>
+
+              <section id="usage">
+                <h2 class="flex items-center gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.096 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg><span>How to Use TapType</span></h2>
+                <p>Using TapType is as simple as typing normally, but with a new layer of intelligence.</p>
+                <ul>
+                  <li><strong>For Lowercase:</strong> Simply tap any letter key as you normally would.</li>
+                  <li><strong>For Uppercase:</strong> Briefly hold the letter key for about 350ms. You will see the uppercase letter appear.</li>
+                  <li><strong>For Symbols:</strong> The same logic applies to number and symbol keys. Tapping '1' gives you <code>1</code>, while holding it gives you <code>!</code>.</li>
+                  <li><strong>Toggling On/Off:</strong> To temporarily disable TapType, right-click its icon in the system tray and uncheck "Enable". To exit the application completely, select "Exit".</li>
+                </ul>
+              </section>
+              
+              <section id="video-demo">
+                  <h2 class="flex items-center gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg><span>Watch It in Action</span></h2>
+                  <p>See how fluid typing can be with this short demonstration.</p>
+                  <div class="aspect-w-16 aspect-h-9 not-prose">
+                      <iframe class="w-full h-full rounded-xl shadow-lg border border-slate-200" src="https://www.youtube.com/embed/QOR5MLIS7Kk" title="TapType Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+              </section>
+
+              <section id="faq-summary">
+                <h2 class="flex items-center gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span>Frequently Asked Questions</span></h2>
+                <h3>Is TapType safe? Does it log my keystrokes?</h3>
+                <p><strong>Absolutely safe.</strong> TapType processes keystrokes locally on your machine and does not record, store, or transmit any data to the internet. Your privacy is paramount.</p>
+                <h3>Does it work in games?</h3>
+                <p>We recommend disabling TapType via the system tray icon before starting a gaming session, as the hold-to-type mechanic may interfere with game controls (like holding <code>W</code> to walk forward).</p>
+                <h3>Can I adjust the hold delay?</h3>
+                <p>Currently, the hold delay is fixed at an optimal duration for most users. A settings panel for customization is on our future roadmap.</p>
+              </section>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA SECTION -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="bg-slate-200 rounded-2xl p-8 md:p-12 text-center md:text-left md:flex md:items-center md:justify-between">
+            <div>
+                <h3 class="text-2xl font-bold text-slate-900">Still need help?</h3>
+                <p class="mt-1 text-slate-600 max-w-lg">Check our FAQ for more answers, or download the app to try it for yourself.</p>
+            </div>
+            <div class="mt-6 md:mt-0 md:ml-6 flex-shrink-0">
+                <a href="faq.html" class="inline-block bg-white text-slate-800 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-slate-50 transition-colors">Visit FAQ</a>
+            </div>
+        </div>
+    </div>
+  </main>
+  
+  <footer class="bg-white border-t border-slate-200"><div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center"><p class="text-slate-500">© 2025 TapType • Documentation by NOVA MINDS</p></div></footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+    const mobileMenuButton = document.getElementById('mobile-menu-button'), mobileMenu = document.getElementById('mobile-menu'), hamburgerIcon = document.getElementById('hamburger-icon'), closeIcon = document.getElementById('close-icon');
+    mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); hamburgerIcon.classList.toggle('hidden'); closeIcon.classList.toggle('hidden'); document.body.classList.toggle('overflow-hidden'); });
+
+    const sections = document.querySelectorAll('main section[id]');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop - 120) { current = section.getAttribute('id'); }
+        });
+        sidebarLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) { link.classList.add('active'); }
+        });
+    });
+  </script>
+</body>
+</html>
