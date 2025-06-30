@@ -202,10 +202,10 @@ window.addEventListener('scroll', () => {
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
-    // const navbar = document.getElementById('navbar');
-    // window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
-    // const mobileMenuButton = document.getElementById('mobile-menu-button'), mobileMenu = document.getElementById('mobile-menu'), hamburgerIcon = document.getElementById('hamburger-icon'), closeIcon = document.getElementById('close-icon');
-    // mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); hamburgerIcon.classList.toggle('hidden'); closeIcon.classList.toggle('hidden'); document.body.classList.toggle('overflow-hidden'); });
+    const navbar = document.getElementById('navbar');
+     window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+   const mobileMenuButton = document.getElementById('mobile-menu-button'), mobileMenu = document.getElementById('mobile-menu'), hamburgerIcon = document.getElementById('hamburger-icon'), closeIcon = document.getElementById('close-icon');
+     mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); hamburgerIcon.classList.toggle('hidden'); closeIcon.classList.toggle('hidden'); document.body.classList.toggle('overflow-hidden'); });
 
     const sections = document.querySelectorAll('main section[id]');
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
