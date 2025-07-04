@@ -64,7 +64,7 @@ We have submitted the file for reanalysis to:
 ## 📫 Developer
 
 **👤 Soham Khot**  
-📧 sohamyourmail@gmail.com  
+📧 sohamkhot75@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/sohamkhot75/)
 
 ---
